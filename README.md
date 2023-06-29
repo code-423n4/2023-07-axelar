@@ -117,7 +117,7 @@ Automated findings output for the audit can be found [here](add link to report) 
 - Is it multi-chain?:  True
 - Does it use a side-chain?: False
 - Is this an upgrade of an existing system? False
-- Describe any specific areas you would like addressed. E.g. Please try to break XYZ.": Verify correctness of different token deployment types, and cross-chain transfers. Try to break authentication, token bridging invariants, and governance timelock mechanism
+- Describe any specific areas you would like addressed.: Verify correctness of different token deployment types, and cross-chain transfers. Try to break authentication, token bridging invariants, and governance timelock mechanism
 ```
 
 # Tests
