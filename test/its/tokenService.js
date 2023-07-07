@@ -8,10 +8,10 @@ const { AddressZero, MaxUint256 } = ethers.constants;
 const { defaultAbiCoder, solidityPack, keccak256 } = ethers.utils;
 const { Contract, Wallet } = ethers;
 
-const TokenManager = require('../artifacts/contracts/token-manager/TokenManager.sol/TokenManager.json');
+const TokenManager = require('../../artifacts/contracts/its/token-manager/TokenManager.sol/TokenManager.json');
 
-const { approveContractCall, getRandomBytes32 } = require('../scripts/utils');
-const { deployAll, deployContract } = require('../scripts/deploy');
+const { approveContractCall, getRandomBytes32 } = require('../../scripts/utils');
+const { deployAll, deployContract } = require('../../scripts/deploy');
 
 const SELECTOR_SEND_TOKEN = 1;
 const SELECTOR_SEND_TOKEN_WITH_DATA = 2;

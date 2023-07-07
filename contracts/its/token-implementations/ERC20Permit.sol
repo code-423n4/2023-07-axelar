@@ -3,7 +3,7 @@
 pragma solidity ^0.8.0;
 
 import { IERC20 } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IERC20.sol';
-import { IERC20Permit } from '@axelar-network/axelar-cgp-solidity/contracts/interfaces/IERC20Permit.sol';
+import { IERC20Permit } from '../../cgp/interfaces/IERC20Permit.sol';
 
 import { ERC20 } from './ERC20.sol';
 
@@ -59,7 +59,15 @@ abstract contract ERC20Permit is IERC20, IERC20Permit, ERC20 {
      * @param r Half of the ECDSA signature pair
      * @param s Half of the ECDSA signature pair
      */
-    function permit(address issuer, address spender, uint256 value, uint256 deadline, uint8 v, bytes32 r, bytes32 s) external {
+    function permit(
+        address issuer,
+        address spender,
+        uint256 value,
+        uint256 deadline,
+        uint8 v,
+        bytes32 r,
+        bytes32 s
+    ) external {
         if (block.timestamp > deadline) revert PermitExpired();
 
         if (uint256(s) > 0x7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5D576E7357A4501DDFE92F46681B20A0) revert InvalidS();

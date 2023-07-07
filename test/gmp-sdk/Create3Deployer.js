@@ -4,9 +4,10 @@ const chai = require('chai');
 const { expect } = chai;
 const { ethers } = require('hardhat');
 const { deployCreate3Contract, deployCreate3AndInitContract, getCreate3Address } = require('@axelar-network/axelar-gmp-sdk-solidity');
-const BurnableMintableCappedERC20 = require('../artifacts/contracts/gmp-sdk/test/ERC20MintableBurnable.sol/ERC20MintableBurnable.json');
-const BurnableMintableCappedERC20Init = require('../artifacts/contracts/gmp-sdk/test/ERC20MintableBurnableInit.sol/ERC20MintableBurnableInit.json');
-const MockDepositReceiver = require('../artifacts/contracts/gmp-sdk/test/MockDepositReceiver.sol/MockDepositReceiver.json');
+const BurnableMintableCappedERC20 = require('../../artifacts/contracts/gmp-sdk/test/ERC20MintableBurnable.sol/ERC20MintableBurnable.json');
+const BurnableMintableCappedERC20Init = require('../../artifacts/contracts/gmp-sdk/test/ERC20MintableBurnableInit.sol/ERC20MintableBurnableInit.json');
+const MockDepositReceiver = require('../../artifacts/contracts/gmp-sdk/test/MockDepositReceiver.sol/MockDepositReceiver.json');
+const Create3Deployer = require('../../artifacts/contracts/gmp-sdk/deploy/Create3Deployer.sol/Create3Deployer.json');
 
 describe('Create3Deployer', () => {
     let deployerWallet;
@@ -22,7 +23,7 @@ describe('Create3Deployer', () => {
     before(async () => {
         [deployerWallet, userWallet, receiverWallet] = await ethers.getSigners();
 
-        deployerFactory = await ethers.getContractFactory('Create3Deployer', deployerWallet);
+        deployerFactory = await ethers.getContractFactory(Create3Deployer.abi, Create3Deployer.bytecode, deployerWallet);
     });
 
     beforeEach(async () => {

@@ -6,7 +6,7 @@ const { ethers } = require('hardhat');
 const { AddressZero } = ethers.constants;
 const { defaultAbiCoder } = ethers.utils;
 const { expect } = chai;
-const { deployRemoteAddressValidator, deployContract } = require('../scripts/deploy');
+const { deployRemoteAddressValidator, deployContract } = require('../../scripts/deploy');
 
 describe('RemoteAddressValidator', () => {
     let ownerWallet, otherWallet, remoteAddressValidator, interchainTokenServiceAddress;

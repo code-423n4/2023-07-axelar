@@ -5,8 +5,9 @@ const { expect } = chai;
 const { ethers } = require('hardhat');
 
 const { deployCreate3Upgradable, upgradeUpgradable } = require('@axelar-network/axelar-gmp-sdk-solidity');
-const Proxy = require('../artifacts/contracts/gmp-sdk/test/ProxyTest.sol/ProxyTest.json');
-const Upgradable = require('../artifacts/contracts/gmp-sdk/test/UpgradableTest.sol/UpgradableTest.json');
+const Proxy = require('../../artifacts/contracts/gmp-sdk/test/ProxyTest.sol/ProxyTest.json');
+const Upgradable = require('../../artifacts/contracts/gmp-sdk/test/UpgradableTest.sol/UpgradableTest.json');
+const Create3Deployer = require('../../artifacts/contracts/gmp-sdk/deploy/Create3Deployer.sol/Create3Deployer.json');
 
 describe('Upgradable', () => {
     let upgradable;
@@ -21,7 +22,7 @@ describe('Upgradable', () => {
 
         upgradableTestFactory = await ethers.getContractFactory('UpgradableTest', ownerWallet);
 
-        create3DeployerFactory = await ethers.getContractFactory('Create3Deployer', ownerWallet);
+        create3DeployerFactory = await ethers.getContractFactory(Create3Deployer.abi, Create3Deployer.bytecode, ownerWallet);
     });
 
     beforeEach(async () => {

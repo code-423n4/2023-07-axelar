@@ -8,13 +8,13 @@ const { AddressZero } = ethers.constants;
 const { defaultAbiCoder, keccak256 } = ethers.utils;
 const { Contract, Wallet } = ethers;
 
-const IStandardizedTokenDeployer = require('../artifacts/contracts/interfaces/IStandardizedTokenDeployer.sol/IStandardizedTokenDeployer.json');
-const IStandardizedToken = require('../artifacts/contracts/interfaces/IStandardizedToken.sol/IStandardizedToken.json');
-const ITokenManager = require('../artifacts/contracts/interfaces/ITokenManager.sol/ITokenManager.json');
-const Create3Deployer = require('../artifacts/@axelar-network/axelar-gmp-sdk-solidity/contracts/deploy/Create3Deployer.sol/Create3Deployer.json');
+const IStandardizedTokenDeployer = require('../../artifacts/contracts/its/interfaces/IStandardizedTokenDeployer.sol/IStandardizedTokenDeployer.json');
+const IStandardizedToken = require('../../artifacts/contracts/its/interfaces/IStandardizedToken.sol/IStandardizedToken.json');
+const ITokenManager = require('../../artifacts/contracts/its/interfaces/ITokenManager.sol/ITokenManager.json');
+const Create3Deployer = require('../../artifacts/contracts/gmp-sdk/deploy/Create3Deployer.sol/Create3Deployer.json');
 
-const { getRandomBytes32 } = require('../scripts/utils');
-const { deployAll } = require('../scripts/deploy');
+const { getRandomBytes32 } = require('../../scripts/utils');
+const { deployAll } = require('../../scripts/deploy');
 
 const SELECTOR_SEND_TOKEN = 1;
 // const SELECTOR_SEND_TOKEN_WITH_DATA = 2;

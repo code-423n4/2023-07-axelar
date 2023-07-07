@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.0;
 
-import { IERC20 } from '@axelar-network/axelar-cgp-solidity/contracts/interfaces/IERC20.sol';
+import { IERC20 } from '../../cgp/interfaces/IERC20.sol';
 
 // This should be owned by the microservice that is paying for gas.
 contract AxelarGasService {
@@ -184,19 +184,33 @@ contract AxelarGasService {
         );
     }
 
-    function addGas(bytes32 txHash, uint256 logIndex, address gasToken, uint256 gasFeeAmount, address refundAddress) external {
+    function addGas(
+        bytes32 txHash,
+        uint256 logIndex,
+        address gasToken,
+        uint256 gasFeeAmount,
+        address refundAddress
+    ) external {
         _safeTransferFrom(gasToken, msg.sender, gasFeeAmount);
 
         emit GasAdded(txHash, logIndex, gasToken, gasFeeAmount, refundAddress);
     }
 
-    function addNativeGas(bytes32 txHash, uint256 logIndex, address refundAddress) external payable {
+    function addNativeGas(
+        bytes32 txHash,
+        uint256 logIndex,
+        address refundAddress
+    ) external payable {
         if (msg.value == 0) revert NothingReceived();
 
         emit NativeGasAdded(txHash, logIndex, msg.value, refundAddress);
     }
 
-    function collectFees(address payable receiver, address[] calldata tokens, uint256[] calldata amounts) external onlyCollector {
+    function collectFees(
+        address payable receiver,
+        address[] calldata tokens,
+        uint256[] calldata amounts
+    ) external onlyCollector {
         if (receiver == address(0)) revert InvalidAddress();
 
         uint256 tokensLength = tokens.length;
@@ -215,7 +229,11 @@ contract AxelarGasService {
         }
     }
 
-    function refund(address payable receiver, address token, uint256 amount) external onlyCollector {
+    function refund(
+        address payable receiver,
+        address token,
+        uint256 amount
+    ) external onlyCollector {
         if (receiver == address(0)) revert InvalidAddress();
 
         if (token == address(0)) {
@@ -225,7 +243,11 @@ contract AxelarGasService {
         }
     }
 
-    function _safeTransfer(address tokenAddress, address receiver, uint256 amount) internal {
+    function _safeTransfer(
+        address tokenAddress,
+        address receiver,
+        uint256 amount
+    ) internal {
         if (amount == 0) revert NothingReceived();
 
         (bool success, bytes memory returnData) = tokenAddress.call(abi.encodeWithSelector(IERC20.transfer.selector, receiver, amount));
@@ -234,7 +256,11 @@ contract AxelarGasService {
         if (!transferred || tokenAddress.code.length == 0) revert TransferFailed();
     }
 
-    function _safeTransferFrom(address tokenAddress, address from, uint256 amount) internal {
+    function _safeTransferFrom(
+        address tokenAddress,
+        address from,
+        uint256 amount
+    ) internal {
         if (amount == 0) revert NothingReceived();
 
         (bool success, bytes memory returnData) = tokenAddress.call(

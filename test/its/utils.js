@@ -8,12 +8,13 @@ const { Wallet, Contract } = ethers;
 const { AddressZero } = ethers.constants;
 const { defaultAbiCoder } = ethers.utils;
 const { expect } = chai;
-const { getRandomBytes32 } = require('../scripts/utils');
-const { deployContract } = require('../scripts/deploy');
+const { getRandomBytes32 } = require('../../scripts/utils');
+const { deployContract } = require('../../scripts/deploy');
 
-const ImplemenationTest = require('../artifacts/contracts/test/utils/ImplementationTest.sol/ImplementationTest.json');
-const StandardizedToken = require('../artifacts/contracts/token-implementations/StandardizedToken.sol/StandardizedToken.json');
-const StandardizedTokenProxy = require('../artifacts/contracts/proxies/StandardizedTokenProxy.sol/StandardizedTokenProxy.json');
+const ImplemenationTest = require('../../artifacts/contracts/its/test/utils/ImplementationTest.sol/ImplementationTest.json');
+const StandardizedToken = require('../../artifacts/contracts/its/token-implementations/StandardizedToken.sol/StandardizedToken.json');
+const StandardizedTokenProxy = require('../../artifacts/contracts/its/proxies/StandardizedTokenProxy.sol/StandardizedTokenProxy.json');
+const Create3Deployer = require('../../artifacts/contracts/gmp-sdk/deploy/Create3Deployer.sol/Create3Deployer.json');
 
 let ownerWallet, otherWallet;
 before(async () => {
@@ -342,7 +343,7 @@ describe('Pausable', () => {
 });
 
 describe('StandardizedTokenDeployer', () => {
-    let create3Deployer, standardizedTokenLockUnlock, standardizedTokenDeployer, standardizedTokenMintBurn;
+    let create3DeployerFactory, create3Deployer, standardizedTokenLockUnlock, standardizedTokenDeployer, standardizedTokenMintBurn;
     const tokenManager = new Wallet(getRandomBytes32()).address;
     const distributor = new Wallet(getRandomBytes32()).address;
     const mintTo = new Wallet(getRandomBytes32()).address;
@@ -352,7 +353,8 @@ describe('StandardizedTokenDeployer', () => {
     const mintAmount = 123;
 
     before(async () => {
-        create3Deployer = await deployContract(ownerWallet, 'Create3Deployer');
+        create3DeployerFactory = await ethers.getContractFactory(Create3Deployer.abi, Create3Deployer.bytecode, ownerWallet);
+        create3Deployer = await create3DeployerFactory.deploy().then((d) => d.deployed());
         standardizedTokenLockUnlock = await deployContract(ownerWallet, 'StandardizedTokenLockUnlock');
         standardizedTokenMintBurn = await deployContract(ownerWallet, 'StandardizedTokenMintBurn');
         standardizedTokenDeployer = await deployContract(ownerWallet, 'StandardizedTokenDeployer', [
