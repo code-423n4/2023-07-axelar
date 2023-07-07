@@ -322,7 +322,11 @@ contract InterchainTokenService is
      * At least the amount specified needs to be passed to the call
      * @dev `gasValue` exists because this function can be part of a multicall involving multiple functions that could make remote contract calls.
      */
-    function deployRemoteCanonicalToken(bytes32 tokenId, string calldata destinationChain, uint256 gasValue) public payable notPaused {
+    function deployRemoteCanonicalToken(
+        bytes32 tokenId,
+        string calldata destinationChain,
+        uint256 gasValue
+    ) public payable notPaused {
         address tokenAddress = getValidTokenManagerAddress(tokenId);
         tokenAddress = ITokenManager(tokenAddress).tokenAddress();
         if (getCanonicalTokenId(tokenAddress) != tokenId) revert NotCanonicalTokenManager();
@@ -432,7 +436,12 @@ contract InterchainTokenService is
      * @param amount the amount of token to give.
      * @param commandId the sendHash detected at the sourceChain.
      */
-    function expressReceiveToken(bytes32 tokenId, address destinationAddress, uint256 amount, bytes32 commandId) external {
+    function expressReceiveToken(
+        bytes32 tokenId,
+        address destinationAddress,
+        uint256 amount,
+        bytes32 commandId
+    ) external {
         if (gateway.isCommandExecuted(commandId)) revert AlreadyExecuted(commandId);
 
         address caller = msg.sender;
@@ -547,10 +556,11 @@ contract InterchainTokenService is
         _setOperator(params.toAddress());
     }
 
-    function _sanitizeTokenManagerImplementation(
-        address[] memory implementaions,
-        TokenManagerType tokenManagerType
-    ) internal pure returns (address implementation) {
+    function _sanitizeTokenManagerImplementation(address[] memory implementaions, TokenManagerType tokenManagerType)
+        internal
+        pure
+        returns (address implementation)
+    {
         implementation = implementaions[uint256(tokenManagerType)];
         if (implementation == address(0)) revert ZeroAddress();
         if (ITokenManager(implementation).implementationType() != uint256(tokenManagerType)) revert InvalidTokenManagerImplementation();
@@ -694,7 +704,12 @@ contract InterchainTokenService is
      * @param gasValue The amount of gas to be paid for the transaction
      * @param refundTo The address where the unused gas amount should be refunded to
      */
-    function _callContract(string calldata destinationChain, bytes memory payload, uint256 gasValue, address refundTo) internal {
+    function _callContract(
+        string calldata destinationChain,
+        bytes memory payload,
+        uint256 gasValue,
+        address refundTo
+    ) internal {
         string memory destinationAddress = remoteAddressValidator.getRemoteAddress(destinationChain);
         if (gasValue > 0) {
             gasService.payNativeGasForContractCall{ value: gasValue }(
@@ -708,7 +723,14 @@ contract InterchainTokenService is
         gateway.callContract(destinationChain, destinationAddress, payload);
     }
 
-    function _validateToken(address tokenAddress) internal returns (string memory name, string memory symbol, uint8 decimals) {
+    function _validateToken(address tokenAddress)
+        internal
+        returns (
+            string memory name,
+            string memory symbol,
+            uint8 decimals
+        )
+    {
         IERC20Named token = IERC20Named(tokenAddress);
         name = token.name();
         symbol = token.symbol();
@@ -783,7 +805,11 @@ contract InterchainTokenService is
      * @param tokenManagerType The type of the token manager to be deployed
      * @param params Additional parameters for the token manager deployment
      */
-    function _deployTokenManager(bytes32 tokenId, TokenManagerType tokenManagerType, bytes memory params) internal {
+    function _deployTokenManager(
+        bytes32 tokenId,
+        TokenManagerType tokenManagerType,
+        bytes memory params
+    ) internal {
         (bool success, ) = tokenManagerDeployer.delegatecall(
             abi.encodeWithSelector(ITokenManagerDeployer.deployTokenManager.selector, tokenId, tokenManagerType, params)
         );

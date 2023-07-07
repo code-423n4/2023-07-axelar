@@ -178,7 +178,11 @@ interface IInterchainTokenService is ITokenManagerType, IExpressCallHandler, IAx
      * @param destinationChain The name of the destination chain.
      * @param gasValue The gas value for deployment.
      */
-    function deployRemoteCanonicalToken(bytes32 tokenId, string calldata destinationChain, uint256 gasValue) external payable;
+    function deployRemoteCanonicalToken(
+        bytes32 tokenId,
+        string calldata destinationChain,
+        uint256 gasValue
+    ) external payable;
 
     /**
      * @notice Deploys a custom token manager contract.
@@ -315,7 +319,12 @@ interface IInterchainTokenService is ITokenManagerType, IExpressCallHandler, IAx
      * @param amount the amount of token to give.
      * @param commandId the commandId calculated from the event at the sourceChain.
      */
-    function expressReceiveToken(bytes32 tokenId, address destinationAddress, uint256 amount, bytes32 commandId) external;
+    function expressReceiveToken(
+        bytes32 tokenId,
+        address destinationAddress,
+        uint256 amount,
+        bytes32 commandId
+    ) external;
 
     /**
      * @notice Uses the caller's tokens to fullfill a callContractWithInterchainToken ahead of time. Use this only if you have detected an outgoing sendToken that matches the parameters passed here.

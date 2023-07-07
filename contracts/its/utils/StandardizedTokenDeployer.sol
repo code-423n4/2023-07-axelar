@@ -23,7 +23,11 @@ contract StandardizedTokenDeployer is IStandardizedTokenDeployer {
      * @param implementationLockUnlockAddress_ Address of the StandardizedTokenLockUnlock contract
      * @param implementationMintBurnAddress_ Address of the StandardizedTokenMintBurn contract
      */
-    constructor(address deployer_, address implementationLockUnlockAddress_, address implementationMintBurnAddress_) {
+    constructor(
+        address deployer_,
+        address implementationLockUnlockAddress_,
+        address implementationMintBurnAddress_
+    ) {
         if (deployer_ == address(0) || implementationLockUnlockAddress_ == address(0) || implementationMintBurnAddress_ == address(0))
             revert AddressZero();
         deployer = Create3Deployer(deployer_);

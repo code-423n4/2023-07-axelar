@@ -18,7 +18,11 @@ contract MockAxelarGateway is IMockAxelarGateway {
     |* Public Methods *|
     \******************/
 
-    function callContract(string calldata destinationChain, string calldata destinationContractAddress, bytes calldata payload) external {
+    function callContract(
+        string calldata destinationChain,
+        string calldata destinationContractAddress,
+        bytes calldata payload
+    ) external {
         emit ContractCall(msg.sender, destinationChain, destinationContractAddress, keccak256(payload), payload);
     }
 

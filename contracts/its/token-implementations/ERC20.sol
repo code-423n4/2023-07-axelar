@@ -76,7 +76,11 @@ contract ERC20 is IERC20 {
      * - the caller must have allowance for ``sender``'s tokens of at least
      * `amount`.
      */
-    function transferFrom(address sender, address recipient, uint256 amount) external virtual override returns (bool) {
+    function transferFrom(
+        address sender,
+        address recipient,
+        uint256 amount
+    ) external virtual override returns (bool) {
         uint256 _allowance = allowance[sender][msg.sender];
 
         if (_allowance != type(uint256).max) {
@@ -138,7 +142,11 @@ contract ERC20 is IERC20 {
      * - `recipient` cannot be the zero address.
      * - `sender` must have a balance of at least `amount`.
      */
-    function _transfer(address sender, address recipient, uint256 amount) internal virtual {
+    function _transfer(
+        address sender,
+        address recipient,
+        uint256 amount
+    ) internal virtual {
         if (sender == address(0) || recipient == address(0)) revert InvalidAccount();
 
         balanceOf[sender] -= amount;
@@ -195,7 +203,11 @@ contract ERC20 is IERC20 {
      * - `owner` cannot be the zero address.
      * - `spender` cannot be the zero address.
      */
-    function _approve(address owner, address spender, uint256 amount) internal virtual {
+    function _approve(
+        address owner,
+        address spender,
+        uint256 amount
+    ) internal virtual {
         if (owner == address(0) || spender == address(0)) revert InvalidAccount();
 
         allowance[owner][spender] = amount;

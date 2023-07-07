@@ -14,7 +14,12 @@ contract InterchainTokenTest is InterchainToken, Distributable, IERC20BurnableMi
     string public symbol;
     uint8 public decimals;
 
-    constructor(string memory name_, string memory symbol_, uint8 decimals_, address tokenManager_) {
+    constructor(
+        string memory name_,
+        string memory symbol_,
+        uint8 decimals_,
+        address tokenManager_
+    ) {
         name = name_;
         symbol = symbol_;
         decimals = decimals_;

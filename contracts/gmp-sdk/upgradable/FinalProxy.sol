@@ -69,10 +69,7 @@ contract FinalProxy is Proxy, IFinalProxy {
      * @param setupParams The parameters to setup the final implementation contract
      * @return finalImplementation_ The address of the final implementation contract
      */
-    function finalUpgrade(bytes memory bytecode, bytes calldata setupParams)
-        public
-        returns (address finalImplementation_)
-    {
+    function finalUpgrade(bytes memory bytecode, bytes calldata setupParams) public returns (address finalImplementation_) {
         address owner;
         assembly {
             owner := sload(_OWNER_SLOT)
@@ -81,9 +78,7 @@ contract FinalProxy is Proxy, IFinalProxy {
 
         finalImplementation_ = Create3.deploy(FINAL_IMPLEMENTATION_SALT, bytecode);
         if (setupParams.length != 0) {
-            (bool success, ) = finalImplementation_.delegatecall(
-                abi.encodeWithSelector(BaseProxy.setup.selector, setupParams)
-            );
+            (bool success, ) = finalImplementation_.delegatecall(abi.encodeWithSelector(BaseProxy.setup.selector, setupParams));
             if (!success) revert SetupFailed();
         }
     }

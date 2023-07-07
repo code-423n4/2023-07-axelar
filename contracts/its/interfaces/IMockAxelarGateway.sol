@@ -88,7 +88,11 @@ interface IMockAxelarGateway {
     |* Public Functions *|
     \********************/
 
-    function callContract(string calldata destinationChain, string calldata contractAddress, bytes calldata payload) external;
+    function callContract(
+        string calldata destinationChain,
+        string calldata contractAddress,
+        bytes calldata payload
+    ) external;
 
     function isContractCallApproved(
         bytes32 commandId,

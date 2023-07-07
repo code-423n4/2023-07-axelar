@@ -22,7 +22,12 @@ contract TokenManagerProxy is ITokenManagerProxy {
      * @param tokenId_ The identifier for the token
      * @param params The initialization parameters for the token manager contract
      */
-    constructor(address interchainTokenServiceAddress_, uint256 implementationType_, bytes32 tokenId_, bytes memory params) {
+    constructor(
+        address interchainTokenServiceAddress_,
+        uint256 implementationType_,
+        bytes32 tokenId_,
+        bytes memory params
+    ) {
         interchainTokenServiceAddress = IInterchainTokenService(interchainTokenServiceAddress_);
         implementationType = implementationType_;
         tokenId = tokenId_;
@@ -46,10 +51,11 @@ contract TokenManagerProxy is ITokenManagerProxy {
      * @param implementationType_ The token manager type
      * @return impl The address of the implementation
      */
-    function _getImplementation(
-        IInterchainTokenService interchainTokenServiceAddress_,
-        uint256 implementationType_
-    ) internal view returns (address impl) {
+    function _getImplementation(IInterchainTokenService interchainTokenServiceAddress_, uint256 implementationType_)
+        internal
+        view
+        returns (address impl)
+    {
         impl = interchainTokenServiceAddress_.getImplementation(implementationType_);
     }
 

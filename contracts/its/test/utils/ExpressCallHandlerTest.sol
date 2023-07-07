@@ -30,7 +30,12 @@ contract ExpressCallHandlerTest is ExpressCallHandler {
         _setExpressReceiveTokenWithData(tokenId, sourceChain, sourceAddress, destinationAddress, amount, data, commandId, expressCaller);
     }
 
-    function popExpressReceiveToken(bytes32 tokenId, address destinationAddress, uint256 amount, bytes32 commandId) external {
+    function popExpressReceiveToken(
+        bytes32 tokenId,
+        address destinationAddress,
+        uint256 amount,
+        bytes32 commandId
+    ) external {
         lastPoppedExpressCaller = _popExpressReceiveToken(tokenId, destinationAddress, amount, commandId);
     }
 

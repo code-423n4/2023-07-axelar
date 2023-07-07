@@ -86,7 +86,12 @@ contract FlowLimit is IFlowLimit {
      * @param slotToCompare The slot to compare the flow against
      * @param flowAmount The flow amount to add
      */
-    function _addFlow(uint256 flowLimit, uint256 slotToAdd, uint256 slotToCompare, uint256 flowAmount) internal {
+    function _addFlow(
+        uint256 flowLimit,
+        uint256 slotToAdd,
+        uint256 slotToCompare,
+        uint256 flowAmount
+    ) internal {
         uint256 flowToAdd;
         uint256 flowToCompare;
         assembly {

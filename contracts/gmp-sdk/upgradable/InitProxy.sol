@@ -55,9 +55,7 @@ contract InitProxy is BaseProxy, IInitProxy {
         }
 
         if (params.length != 0) {
-            (bool success, ) = implementationAddress.delegatecall(
-                abi.encodeWithSelector(IUpgradable.setup.selector, params)
-            );
+            (bool success, ) = implementationAddress.delegatecall(abi.encodeWithSelector(IUpgradable.setup.selector, params));
             if (!success) revert SetupFailed();
         }
     }
