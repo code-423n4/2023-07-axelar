@@ -2,11 +2,11 @@
 
 pragma solidity ^0.8.0;
 
-import { IAxelarGateway } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IAxelarGateway.sol';
-import { IAxelarGasService } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IAxelarGasService.sol';
-import { AxelarExecutable } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/executable/AxelarExecutable.sol';
-import { SafeTokenTransferFrom } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/utils/SafeTransfer.sol';
-import { IERC20 } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IERC20.sol';
+import { IAxelarGateway } from '../../gmp-sdk/interfaces/IAxelarGateway.sol';
+import { IAxelarGasService } from '../../gmp-sdk/interfaces/IAxelarGasService.sol';
+import { AxelarExecutable } from '../../gmp-sdk/executable/AxelarExecutable.sol';
+import { SafeTokenTransferFrom } from '../../gmp-sdk/util/SafeTransfer.sol';
+import { IERC20 } from '../../gmp-sdk/interfaces/IERC20.sol';
 
 import { IInterchainTokenService } from '../interfaces/IInterchainTokenService.sol';
 import { ITokenManagerDeployer } from '../interfaces/ITokenManagerDeployer.sol';
@@ -18,10 +18,10 @@ import { ITokenManagerProxy } from '../interfaces/ITokenManagerProxy.sol';
 import { IERC20Named } from '../interfaces/IERC20Named.sol';
 
 import { AddressBytesUtils } from '../libraries/AddressBytesUtils.sol';
-import { StringToBytes32, Bytes32ToString } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/utils/Bytes32String.sol';
+import { StringToBytes32, Bytes32ToString } from '../../gmp-sdk/util/Bytes32String.sol';
 
-import { Upgradable } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/upgradable/Upgradable.sol';
-import { Create3Deployer } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/deploy/Create3Deployer.sol';
+import { Upgradable } from '../../gmp-sdk/upgradable/Upgradable.sol';
+import { Create3Deployer } from '../../gmp-sdk/deploy/Create3Deployer.sol';
 
 import { ExpressCallHandler } from '../utils/ExpressCallHandler.sol';
 import { Pausable } from '../utils/Pausable.sol';

@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.0;
 
-import { IAxelarExecutable } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IAxelarExecutable.sol';
+import { IAxelarExecutable } from '../../gmp-sdk/interfaces/IAxelarExecutable.sol';
 import { ICaller } from './ICaller.sol';
 
 /**

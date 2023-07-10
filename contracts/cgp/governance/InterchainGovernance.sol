@@ -2,8 +2,8 @@
 
 pragma solidity ^0.8.0;
 
-import { AxelarExecutable } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/executable/AxelarExecutable.sol';
-import { TimeLock } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/utils/TimeLock.sol';
+import { AxelarExecutable } from '../../gmp-sdk/executable/AxelarExecutable.sol';
+import { TimeLock } from '../../gmp-sdk/util/TimeLock.sol';
 import { IInterchainGovernance } from '../interfaces/IInterchainGovernance.sol';
 import { Caller } from '../util/Caller.sol';
 

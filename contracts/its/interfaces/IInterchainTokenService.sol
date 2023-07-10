@@ -2,8 +2,8 @@
 
 pragma solidity ^0.8.0;
 
-import { IAxelarGateway } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IAxelarGateway.sol';
-import { IAxelarExecutable } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IAxelarExecutable.sol';
+import { IAxelarGateway } from '../../gmp-sdk/interfaces/IAxelarGateway.sol';
+import { IAxelarExecutable } from '../../gmp-sdk/interfaces/IAxelarExecutable.sol';
 
 import { IExpressCallHandler } from './IExpressCallHandler.sol';
 import { ITokenManagerDeployer } from './ITokenManagerDeployer.sol';

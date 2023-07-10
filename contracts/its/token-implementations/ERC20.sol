@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.0;
 
-import { IERC20 } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IERC20.sol';
+import { IERC20 } from '../../gmp-sdk/interfaces/IERC20.sol';
 
 /**
  * @dev Implementation of the {IERC20} interface.

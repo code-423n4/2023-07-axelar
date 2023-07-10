@@ -2,8 +2,8 @@
 
 pragma solidity ^0.8.0;
 
-import { IAxelarGateway } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IAxelarGateway.sol';
-import { IAxelarGasService } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IAxelarGasService.sol';
+import { IAxelarGateway } from '../gmp-sdk/interfaces/IAxelarGateway.sol';
+import { IAxelarGasService } from '../gmp-sdk/interfaces/IAxelarGasService.sol';
 import { IInterchainProposalSender } from './interfaces/IInterchainProposalSender.sol';
 import { InterchainCalls } from './lib/InterchainCalls.sol';
 

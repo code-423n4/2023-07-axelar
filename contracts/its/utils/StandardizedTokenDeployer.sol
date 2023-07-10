@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.0;
 
-import { Create3Deployer } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/deploy/Create3Deployer.sol';
+import { Create3Deployer } from '../../gmp-sdk/deploy/Create3Deployer.sol';
 
 import { IStandardizedTokenDeployer } from '../interfaces/IStandardizedTokenDeployer.sol';
 

@@ -2,8 +2,8 @@
 
 pragma solidity ^0.8.9;
 
-import { SafeTokenCall, SafeTokenTransfer, SafeTokenTransferFrom } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/utils/SafeTransfer.sol';
-import { IERC20 } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IERC20.sol';
+import { SafeTokenCall, SafeTokenTransfer, SafeTokenTransferFrom } from '../gmp-sdk/util/SafeTransfer.sol';
+import { IERC20 } from '../gmp-sdk/interfaces/IERC20.sol';
 import { IAxelarGateway } from './interfaces/IAxelarGateway.sol';
 import { IGovernable } from './interfaces/IGovernable.sol';
 import { IAxelarAuth } from './interfaces/IAxelarAuth.sol';

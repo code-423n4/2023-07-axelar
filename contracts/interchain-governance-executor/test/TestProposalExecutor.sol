@@ -3,8 +3,8 @@
 pragma solidity ^0.8.0;
 
 import { Ownable } from '@openzeppelin/contracts/access/Ownable.sol';
-import { AxelarExecutable } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/executable/AxelarExecutable.sol';
-import { IAxelarExecutable } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IAxelarExecutable.sol';
+import { AxelarExecutable } from '../../gmp-sdk/executable/AxelarExecutable.sol';
+import { IAxelarExecutable } from '../../gmp-sdk/interfaces/IAxelarExecutable.sol';
 import { InterchainProposalExecutor } from '../InterchainProposalExecutor.sol';
 import { InterchainCalls } from '../lib/InterchainCalls.sol';
 

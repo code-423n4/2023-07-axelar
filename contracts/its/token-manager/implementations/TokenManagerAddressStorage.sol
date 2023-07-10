@@ -3,8 +3,8 @@
 pragma solidity ^0.8.0;
 
 import { TokenManager } from '../TokenManager.sol';
-import { IERC20 } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IERC20.sol';
-import { IAxelarGateway } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IAxelarGateway.sol';
+import { IERC20 } from '../../../gmp-sdk/interfaces/IERC20.sol';
+import { IAxelarGateway } from '../../../gmp-sdk/interfaces/IAxelarGateway.sol';
 
 /**
  * @title TokenManagerAddressStorage

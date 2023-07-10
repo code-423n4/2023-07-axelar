@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 
 import { InterchainTokenExpressExecutable } from '../examples/InterchainTokenExpressExecutable.sol';
 import { IInterchainTokenService } from '../interfaces/IInterchainTokenService.sol';
-import { IERC20 } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IERC20.sol';
+import { IERC20 } from '../../gmp-sdk/interfaces/IERC20.sol';
 
 contract InterchainExecutableTest is InterchainTokenExpressExecutable {
     event MessageReceived(string sourceChain, bytes sourceAddress, address receiver, string message, bytes32 tokenId, uint256 amount);
