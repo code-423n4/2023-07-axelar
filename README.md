@@ -76,8 +76,6 @@ _Note for C4 wardens: Anything included in the automated findings output is cons
 
 ## Axelar Governance
 
-This section covers design aspects of Axelar's Solidity contracts implementing the [CGP spec](https://github.com/axelarnetwork/cgp-spec).
-
 ### Interchain Governance
 
 The Interchain Governance Contract facilitates cross-chain governance actions within the Axelar network. It enables the creation, cancellation, and execution of governance proposals while incorporating a TimeLock mechanism. The TimeLock mechanism institutes a mandatory time delay before any proposal execution, thereby offering robust protection against sudden, potentially disruptive changes. This mechanism is used to govern upgrades of the Axelar Gateway contract.
@@ -147,24 +145,6 @@ The contract orchestrates four governance operations:
 #### Secure Execution of Multisig Proposals
 
 Upon receiving the necessary number of signatory approvals, a multisig proposal becomes eligible for execution. Before execution, the contract verifies the proposal's approval status; if the approval status is false, the transaction is reverted. Following successful execution, the proposal's approval status is reset, and a `MultisigExecuted` event is emitted.
-
-## Smart Contracts
-
-Relevant smart contracts in the repo
-
-### Interfaces
-
-#### IAxelarGateway.sol
-
-#### IERC20.sol
-
-#### IERC20BurnFrom.sol
-
-#### IAxelarExecutable.sol
-
-This interface needs to be implemented by the application contract
-to receive cross-chain messages. See the
-[token swapper example](/contracts/test/gmp/DestinationChainSwapExecutable.sol) for an example.
 
 # Axelar Interchain Governance Executor
 
