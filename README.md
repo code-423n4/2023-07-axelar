@@ -188,7 +188,7 @@ flowchart
     end
 ```
 
-# Interchain Token Service Design Notes
+# Interchain Token Service
 
 ## Introduction
 
