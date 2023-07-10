@@ -1,5 +1,5 @@
 {
-  "name": "@axelar-network/axelar-cgp-solidity",
+  "name": "@axelar-network/axelar-solidity",
   "version": "4.5.0",
   "description": "EVM Smart Contracts for Axelar Network",
   "main": "index.js",
@@ -21,13 +21,12 @@
     "axelar"
   ],
   "author": "axelar-network",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/axelarnetwork/axelar-cgp-solidity/issues"
   },
   "homepage": "https://github.com/axelarnetwork/axelar-cgp-solidity#readme",
   "dependencies": {
-    "@axelar-network/axelar-cgp-solidity": "^4.5.0",
     "@axelar-network/axelar-gmp-sdk-solidity": "^3.6.1",
     "@openzeppelin/contracts": "^4.9.2"
   },
