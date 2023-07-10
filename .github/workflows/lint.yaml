@@ -26,9 +26,6 @@ jobs:
       - name: Lint
         run: npm run lint
 
-      - name: Flatten
-        run: npm run flatten
-
       - name: Prettier
         run: npm run prettier
 
