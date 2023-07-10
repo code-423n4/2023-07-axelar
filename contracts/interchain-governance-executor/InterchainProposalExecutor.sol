@@ -51,10 +51,7 @@ contract InterchainProposalExecutor is IInterchainProposalExecutor, AxelarExecut
         }
 
         // Decode the payload
-        (address interchainProposalCaller, InterchainCalls.Call[] memory calls) = abi.decode(
-            payload,
-            (address, InterchainCalls.Call[])
-        );
+        (address interchainProposalCaller, InterchainCalls.Call[] memory calls) = abi.decode(payload, (address, InterchainCalls.Call[]));
 
         // Check that the caller is whitelisted
         if (!whitelistedCallers[sourceChain][interchainProposalCaller]) {
@@ -143,9 +140,9 @@ contract InterchainProposalExecutor is IInterchainProposalExecutor, AxelarExecut
      * - `calls` is the array of `InterchainCalls.Call` to execute. Each call contains the target, value, signature and data.
      */
     function _onProposalExecuted(
-        string calldata /* sourceChain */,
-        string calldata /* sourceAddress */,
-        address /* caller */,
+        string calldata, /* sourceChain */
+        string calldata, /* sourceAddress */
+        address, /* caller */
         bytes calldata payload
     ) internal virtual {
         // You can add your own logic here to handle the payload after the proposal is executed.
@@ -156,7 +153,10 @@ contract InterchainProposalExecutor is IInterchainProposalExecutor, AxelarExecut
      * This function will revert the transaction providing the failure reason if present in the failure data.
      * @param result The return data from the failed call to the target contract.
      */
-    function _onTargetExecutionFailed(InterchainCalls.Call memory /* call */, bytes memory result) internal virtual {
+    function _onTargetExecutionFailed(
+        InterchainCalls.Call memory, /* call */
+        bytes memory result
+    ) internal virtual {
         // You can add your own logic here to handle the failure of the target contract execution. The code below is just an example.
         if (result.length > 0) {
             // The failure data is a revert reason string.

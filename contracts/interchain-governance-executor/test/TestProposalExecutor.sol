@@ -2,12 +2,11 @@
 
 pragma solidity ^0.8.0;
 
-import '@openzeppelin/contracts/access/Ownable.sol';
-import '@axelar-network/axelar-gmp-sdk-solidity/contracts/executable/AxelarExecutable.sol';
-import '@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IAxelarExecutable.sol';
-import '@axelar-network/axelar-gmp-sdk-solidity/contracts/utils/AddressString.sol';
-import '../InterchainProposalExecutor.sol';
-import '../lib/InterchainCalls.sol';
+import { Ownable } from '@openzeppelin/contracts/access/Ownable.sol';
+import { AxelarExecutable } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/executable/AxelarExecutable.sol';
+import { IAxelarExecutable } from '@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IAxelarExecutable.sol';
+import { InterchainProposalExecutor } from '../InterchainProposalExecutor.sol';
+import { InterchainCalls } from '../lib/InterchainCalls.sol';
 
 /**
  * @title InterchainProposalExecutor
@@ -22,11 +21,19 @@ contract TestProposalExecutor is InterchainProposalExecutor {
 
     constructor(address _gateway, address _owner) InterchainProposalExecutor(_gateway, _owner) {}
 
-    function _beforeProposalExecuted(string calldata sourceChain, string calldata sourceAddress, bytes calldata payload) internal override {
+    function _beforeProposalExecuted(
+        string calldata sourceChain,
+        string calldata sourceAddress,
+        bytes calldata payload
+    ) internal override {
         emit BeforeProposalExecuted(sourceChain, sourceAddress, payload);
     }
 
-    function forceExecute(string calldata sourceChain, string calldata sourceAddress, bytes calldata payload) external onlyOwner {
+    function forceExecute(
+        string calldata sourceChain,
+        string calldata sourceAddress,
+        bytes calldata payload
+    ) external onlyOwner {
         _execute(sourceChain, sourceAddress, payload);
     }
 

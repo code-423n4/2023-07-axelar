@@ -60,7 +60,7 @@ contract InterchainProposalSender is IInterchainProposalSender {
         // revert if the sum of given fees are not equal to the msg.value
         revertIfInvalidFee(interchainCalls);
 
-        for (uint i = 0; i < interchainCalls.length; ) {
+        for (uint256 i = 0; i < interchainCalls.length; ) {
             _sendProposal(interchainCalls[i]);
             unchecked {
                 ++i;
@@ -102,8 +102,8 @@ contract InterchainProposalSender is IInterchainProposalSender {
     }
 
     function revertIfInvalidFee(InterchainCalls.InterchainCall[] calldata interchainCalls) private {
-        uint totalGas = 0;
-        for (uint i = 0; i < interchainCalls.length; ) {
+        uint256 totalGas = 0;
+        for (uint256 i = 0; i < interchainCalls.length; ) {
             totalGas += interchainCalls[i].gas;
             unchecked {
                 ++i;

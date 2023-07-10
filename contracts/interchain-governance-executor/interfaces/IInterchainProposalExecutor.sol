@@ -26,7 +26,11 @@ interface IInterchainProposalExecutor {
      * @param sourceSender The source interchain sender address
      * @param whitelisted The whitelisted status
      */
-    function setWhitelistedProposalSender(string calldata sourceChain, address sourceSender, bool whitelisted) external;
+    function setWhitelistedProposalSender(
+        string calldata sourceChain,
+        address sourceSender,
+        bool whitelisted
+    ) external;
 
     /**
      * @notice set the whitelisted status of a proposal caller which normally set to the `Timelock` contract address on the source chain
@@ -34,5 +38,9 @@ interface IInterchainProposalExecutor {
      * @param sourceCaller The source interchain caller address
      * @param whitelisted The whitelisted status
      */
-    function setWhitelistedProposalCaller(string calldata sourceChain, address sourceCaller, bool whitelisted) external;
+    function setWhitelistedProposalCaller(
+        string calldata sourceChain,
+        address sourceCaller,
+        bool whitelisted
+    ) external;
 }
