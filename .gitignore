@@ -21,6 +21,8 @@ lib-cov
 # Coverage directory used by tools like istanbul
 coverage
 *.lcov
+testMatrix.json
+mochaOutput.json
 coverage.json
 
 # nyc test coverage
@@ -103,3 +105,10 @@ dist
 
 # TernJS port file
 .tern-port
+
+build/
+cache/
+artifacts/
+
+info/local.json
+keys.json
