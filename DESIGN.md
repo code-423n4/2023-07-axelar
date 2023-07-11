@@ -1,4 +1,8 @@
-## Axelar Governance
+# Design
+
+This doc covers the design of the Interchain governance and Interchain token service contracts.
+
+# Governance
 
 ### Interchain Governance
 
