@@ -32,9 +32,12 @@ and sign off on commands submitted (by automated services) to the gateway smart 
 Axelar powered apps implement the [AxelarExecutable](https://github.com/code-423n4/2023-07-axelar/tree/main/contracts/gmp-sdk/executable/AxelarExecutable.sol) contract which exposes an `execute` method that checks if the Axelar Gateway contract recorded an approval for that message. The relayer (can be anyone due to being permissionless) triggers the `execute` method automatically once the message has been confirmed by the Axelar network.
 
 The scope of this audit covers the following features:
-- Interchain governance mechanism that allows Axelar DAO to manage upgrades for the axelar gateway and service contracts. And similarly for other DAOs to execute governance proposals interchain.
-- Interchain token service that allows permissionless bridging of tokens cross-chain
-- Helper utilities for deploying upgradable contracts with deterministic addresses.
+
+-   Interchain governance mechanism that allows Axelar DAO to manage upgrades for the axelar gateway and service contracts. And similarly for other DAOs to execute governance proposals interchain.
+-   Interchain token service that allows permissionless bridging of tokens cross-chain
+-   Helper utilities for deploying upgradable contracts with deterministic addresses.
+
+Please see design [docs](../2023-07-axelar/DESIGN.md) for specific implementation details.
 
 ## Build
 
@@ -51,7 +54,6 @@ npm run coverage  # open ./coverage/index.html for unit test coverage
 ```
 
 # Scope
-
 | Contract                                                                                                               | SLOC | Purpose                                                                                                                                                                                                                                                                                                                                           | Libraries used                                                                                                                                                                                          |
 | ---------------------------------------------------------------------------------------------------------------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [IInterchainGovernance.sol](https://github.com/code-423n4/2023-07-axelar/tree/main/contracts/cgp/interfaces/IInterchainGovernance.sol)                                        | 70   | This interface extends IAxelarExecutable to receive interchain governance proposals.                                                                                                                                                                                                                                                                    | N/A                                                                                                                                                                                                     |
@@ -133,6 +135,7 @@ npm run coverage  # open ./coverage/index.html for unit test coverage
 | [IAxelarValuedExpressExecutable.sol](https://github.com/code-423n4/2023-07-axelar/tree/main/contracts/gmp-sdk/interfaces/IAxelarValuedExpressExecutable.sol)                  | 43   | Interface for AxelarValuedExpressExecutable.                                                                                                                                                                                                                                                                                                      | N/A                                                                                                                                                                                                     |
 | [ExpressExecutorTracker.sol](https://github.com/code-423n4/2023-07-axelar/tree/main/contracts/gmp-sdk/express/ExpressExecutorTracker.sol)                                     | 138  | This contract tracks express executors and provides methods to interact with them.                                                                                                                                                                                                                                                                | N/A                                                                                                                                                                                                     |
 
+
 ## Out of scope
 
 All contracts and interfaces not explicitly mentioned above.
@@ -147,28 +150,27 @@ General Message Passing Usage: https://docs.axelar.dev/dev/gmp
 
 Example cross-chain token swap app: https://app.squidrouter.com
 
-
 ## Scoping Details
 
 ```
-- If you have a public code repo, please share it here:  https://github.com/axelarnetwork/interchain-token-service
-- How many contracts are in scope?:   50
-- Total SLoC for these contracts?:  2500
-- How many external imports are there?: 0
-- How many separate interfaces and struct definitions are there for the contracts within scope?:  30
+- If you have a public code repo, please share it here:  https://github.com/axelarnetwork/axelar-cgp-solidity https://github.com/axelarnetwork/axelar-gmp-sdk-solidity https://github.com/axelarnetwork/interchain-governance-executor https://github.com/axelarnetwork/interchain-token-service
+- How many contracts are in scope?:   47
+- Total SLoC for these contracts?:  4745
+- How many external imports are there?: 1
+- How many separate interfaces and struct definitions are there for the contracts within scope?:  31
 - Does most of your code generally use composition or inheritance?:   Inheritance
-- How many external calls?:   1
+- How many external calls?:   0
 - What is the overall line coverage percentage provided by your tests?:  95
-- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:
-- Please describe required context:
+- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?: False
+- Please describe required context: N/A
 - Does it use an oracle?:  No
 - Does the token conform to the ERC20 standard?:  True
 - Are there any novel or unique curve logic or mathematical models?: N/A
 - Does it use a timelock function?:  True
-- Is it an NFT?:
-- Does it have an AMM?:
-- Is it a fork of a popular project?:
-- Does it use rollups?:
+- Is it an NFT?: False
+- Does it have an AMM?: False
+- Is it a fork of a popular project?: False
+- Does it use rollups?: False
 - Is it multi-chain?:  True
 - Does it use a side-chain?: False
 - Is this an upgrade of an existing system? False
