@@ -10,7 +10,7 @@
     -   Lookout awards: $5,250 USDC
     -   Scout awards: $500 USDC
 -   Join [C4 Discord](https://discord.gg/code4rena) to register
--   Submit findings [using the C4 form](https://code4rena.com/contests/2023-07-axelar/submit)
+-   Submit findings [using the C4 form](https://code4rena.com/contests/2023-07-axelar-network/submit)
 -   [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
 -   Starts July 07, 2023 20:00 UTC
 -   Ends July 17, 2023 20:00 UTC
