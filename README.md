@@ -57,7 +57,7 @@ npm run coverage  # open ./coverage/index.html for unit test coverage
 
 Below is a list of all contracts and interfaces within scope for this audit.
 
-NOTE: There is a SLOC discrepancy between the total SLOC of AxelarGateway.sol and the scope because this contract has already undergone audits in the past. Only code that has been modified, specifically the `upgrade`, `setup`, `transferGovernance`, `transferMintLimiter`, `setTokenMintLimits` functions and the `onlyGovernance` and `onlyMintLimiter` modifier definitions are within the scope of this audit.
+❗️ NOTE: There is a SLOC discrepancy between the total SLOC of AxelarGateway.sol and the scope because this contract has already undergone audits in the past. Only code that has been modified, specifically the `upgrade`, `setup`, `transferGovernance`, `transferMintLimiter`, `setTokenMintLimits` functions and the `onlyGovernance` and `onlyMintLimiter` modifier definitions are within the scope of this audit.
 | Contract | SLOC | Purpose | Libraries used |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [IInterchainGovernance.sol](https://github.com/code-423n4/2023-07-axelar/tree/main/contracts/cgp/interfaces/IInterchainGovernance.sol) | 26 | This interface extends IAxelarExecutable to receive interchain governance proposals. | N/A |
@@ -152,9 +152,13 @@ Example cross-chain token swap app: https://app.squidrouter.com
 ## Scoping Details
 
 ```
-- If you have a public code repo, please share it here:  https://github.com/axelarnetwork/axelar-cgp-solidity https://github.com/axelarnetwork/axelar-gmp-sdk-solidity https://github.com/axelarnetwork/interchain-governance-executor https://github.com/axelarnetwork/interchain-token-service
+- If you have a public code repo, please share it here: 
+    - https://github.com/axelarnetwork/axelar-cgp-solidity
+    - https://github.com/axelarnetwork/axelar-gmp-sdk-solidity
+    - https://github.com/axelarnetwork/interchain-governance-executor
+    - https://github.com/axelarnetwork/interchain-token-service
 - How many contracts are in scope?:   44
-- Total SLoC for these contracts?:  3940
+- Total SLoC for these contracts?:  3257
 - How many external imports are there?: 1
 - How many separate interfaces and struct definitions are there for the contracts within scope?:  29
 - Does most of your code generally use composition or inheritance?:   Inheritance
