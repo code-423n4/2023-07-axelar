@@ -1,0 +1,1291 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q3-2023 / axelar-jul12
+==============================================================
+
+[07/12/2023 02:52] kartoonjoy (pinned)
+👋 Hello and welcome to the audit channel for the $80,000 USDC **Axelar Network** audit!
+
+📆 Audit opens 07/12/2023 20:00 (20:00 UTC) and runs through 07/21/2023 20:00 (20:00 UTC) (9 days).
+
+Please give a warm welcome to the Axelar Network team, particularly @dean.axelar (EST), @Foivos (UTC+3), @Kiryl, and @Milap | Axelar (UTC-4), who will be available for questions either here in the channel or via DM in multiple timezone(s).
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this audit, consider enabling notifications for this channel. 🐺 ⏰
+
+Audit Page: https://code4rena.com/contests/2023-07-axelar-network
+
+{Embed}
+https://code4rena.com/contests/2023-07-axelar-network
+Code4rena
+Code4rena is a competitive audit platform that finds more high-severity vulnerabilities, more quickly than any other auditing method.
+Code4rena - ARCHIVE-Q3-2023 - axelar-jul12 [1126884239330263072].txt_Files/c4-og-banner-1D7AA.png
+
+{Reactions}
+❤️‍🔥 (9) 🇬🇷 (3) 🫡 (2) 👍 (2) 
+
+[07/12/2023 02:52] kartoonjoy
+Pinned a message.
+
+
+[07/12/2023 20:11] 0xkazimm
+I'm glad to work with axler team to secure this protocol together 🙏🏻 
+
+and best of luck to all wardens 🙂
+
+{Reactions}
+hi5 (9) 
+
+[07/12/2023 20:37] clemhate
+best of luck guys, it's my second audit as a warden ! hope i can help !
+
+{Reactions}
+hi5 (6) 
+
+[07/12/2023 21:17] fulum
+Gl everyone, have a good time :chefskiss:
+
+{Reactions}
+hi5 (6) 
+
+[07/13/2023 09:06] t1moh
+Do you have previous audits?
+
+
+[07/13/2023 11:07] mrpotatomagic
+@dean.axelar dmed you
+
+{Reactions}
+✅ 
+
+[07/13/2023 11:46] mrpotatomagic
+What is the minimumTimelockDelay going to be set as in the Timelock.sol contract?
+
+
+[07/13/2023 12:07] devabdee
+https://github.com/axelarnetwork/audits
+
+{Reactions}
+👍🏻 (2) 
+
+[07/13/2023 12:46] 0xkazimm
+Can the team accept the friend request(at least one of them) so we can create a group chat, according to @Away✈ kartoonjoy  wardens should create group chat with the sponsor so we save time for both sides
+
+
+[07/13/2023 12:47] 0xkazimm
+We can’t create group chat if one of team did not accept the friend request at least.
+
+
+[07/13/2023 12:51] golanger
+@dean.axelar added you ser
+
+
+[07/13/2023 13:12] 0xkazimm
+did the `InterchainGovernance` only support the execute of Native tokens ?
+
+
+[07/13/2023 13:41] 0x_serial_coder
+@dean.axelar dmed you
+
+{Reactions}
+✅ 
+
+[07/13/2023 13:54] fulum
+I dm you @dean.axelar
+
+{Reactions}
+✅ 
+
+[07/13/2023 14:34] kartoonjoy
+Wardens, there are 4 sponsor members listed above. Feel free to reach out to one of the other team members. Just please don't spam their inboxes.
+
+{Reactions}
+chefskiss (2) 
+
+[07/13/2023 14:43] noro9954
+@dean.axelar @Foivos @Kiryl @Milap | Axelar Hii, can you please inform us about your timezones ?
+
+
+[07/13/2023 16:20] dean.axelar#1908
+Accepted the friend requests
+
+{Reactions}
+🫡 
+
+[07/13/2023 16:22] dean.axelar#1908 (pinned)
+I am generally available between 12 pm and 12 am EST, and sometimes outside these hours as well
+
+
+[07/13/2023 16:23] dean.axelar#1908
+I'll be answering all DMs within the hour :hi5:
+
+
+[07/13/2023 16:37] thebrittfactor (pinned)
+**Wardens** - please note that the automated findings output (AKA the winning bot race report 🏆, submitted by @ChaseTheLight is posted below.
+
+These are considered publicly known issues and are not eligible for awards.
+
+🤖 **Automated findings:** 
+https://gist.github.com/thebrittfactor/c400e0012d0092316699c53843ecad41
+
+📄 **Code4rena submission guidelines and automated findings policy:** 
+https://docs.code4rena.com/roles/wardens/submission-policy#automated-findings-ineligible
+
+The above link will also be added to the contest README shortly.
+
+{Reactions}
+👏 
+
+[07/13/2023 16:37] thebrittfactor
+Pinned a message.
+
+
+[07/13/2023 17:02] 0xflaming0
+Have the current set of contracts within scope been audited, im presuming theres been more contracts added?
+
+
+[07/13/2023 17:02] 0xflaming0
+Since the last audit that is
+
+
+[07/13/2023 17:07] devabdee
+I Would like to hear about this from the protocol team too. But I don't think so current in-scope code is audited. Because AxelarGateway's audited code is out of scope
+
+
+[07/13/2023 17:56] kartoonjoy
+Pinned a message.
+
+
+[07/13/2023 18:19] noro9954
+@dean.axelar DMed you .
+
+{Reactions}
+✅ 
+
+[07/13/2023 19:36] 0xpathfindr
+Hey @dean.axelar sent you a request
+
+{Reactions}
+✅ 
+
+[07/13/2023 20:32] 0xkazimm
+where did the function `_execute` called please ?!
+
+
+[07/13/2023 20:38] mrpotatomagic
+It’s called in the Axelar Executable contract. It’s out of scope I think but there somewhere in the README
+
+{Reactions}
+🙏🏻 (2) 
+
+[07/13/2023 20:44] dean.axelar#1908
+That's correct, here is a link to the contract: https://github.com/axelarnetwork/axelar-gmp-sdk-solidity/blob/main/contracts/executable/AxelarExecutable.sol
+
+{Reactions}
+👍🏻 (2) 
+
+[07/15/2023 03:14] 0xjuntao
+there are so many contracts, where should I start from?🧐
+
+{Reactions}
+🤣 
+
+[07/15/2023 04:25] gd.eth
+I'd like to know too
+
+
+[07/15/2023 07:57] plamkata
+Analize the order of inheritance
+
+
+[07/15/2023 07:57] plamkata
+Until you reach the most baselike and start from there
+
+
+[07/15/2023 07:57] alymurtazamemon
+@dean.axelar @Foivos @Kiryl @Milap | Axelar I am just starting this contest, I would like to know have you provided the initial walk thought of the protocol from users perspective? If not, Can you please provide a small video explaining the flow of the protocol? It would be very helpful for all of us to understand the protocol better because developers know it better than us.
+
+{Reactions}
+☝️ 
+
+[07/15/2023 08:00] alymurtazamemon
+And also please open your DMs for me so I can ask any private questions I will have. Thanks 🙏
+
+
+[07/15/2023 08:33] 0xkazimm
+where can i found the `AxelarGasService` contract please ?
+
+
+[07/15/2023 08:35] immeas
+https://github.com/axelarnetwork/axelar-cgp-solidity/blob/main/contracts/gas-service/AxelarGasService.sol
+
+{Reactions}
+🙏🏻 
+
+[07/15/2023 08:36] immeas
+or here:
+https://github.com/code-423n4/2023-07-axelar/blob/main/contracts/its/test/AxelarGasService.sol
+
+{Reactions}
+🙏🏻 
+
+[07/15/2023 12:50] 0xjuntao
+is signer trusted?
+
+
+[07/15/2023 13:35] noro9954
+@Foivos can you answer DM please ?
+
+
+[07/15/2023 17:16] alymurtazamemon
+@dean.axelar  @Foivos @Kiryl  @Milap | Axelar  if something is not in the scope of the audit but is dangerous then where should I tell it, in the code4rena issues?
+
+
+[07/15/2023 17:30] alymurtazamemon
+OK, c4 stuff answered it. here you can read about it.
+
+https://docs.code4rena.com/awarding/judging-criteria#scope
+
+{Embed}
+https://docs.code4rena.com/awarding/judging-criteria
+Judging criteria
+
+
+[07/16/2023 06:40] 0xjuntao
+who is expected to call execute() in AxelarExecutable contract?
+
+
+[07/16/2023 06:45] 0xjuntao
+oh, "The relayer (can be anyone due to being permissionless) triggers the execute method automatically once the message has been confirmed by the Axelar network"
+
+
+[07/16/2023 06:48] 0xjuntao
+execute method checks if the Axelar Gateway contract recorded an approval for that message, so where does the approval come from? who approve it? cc @deathflash , @Foivos , @Kiryl  and @Milap | Axelar
+
+
+[07/16/2023 06:50] zhaojie
+a pos chain base on cosmos
+
+
+[07/16/2023 06:53] 0xjuntao
+thanks mate, can you please expand on it?
+
+
+[07/16/2023 06:57] zhaojie
+https://docs.axelar.dev/
+
+{Embed}
+https://docs.axelar.dev/
+What is Axelar? | Axelar
+Axelar Network Resources & Documentation
+Code4rena - ARCHIVE-Q3-2023 - axelar-jul12 [1126884239330263072].txt_Files/og-3997F.png
+
+{Reactions}
+10_10 
+
+[07/16/2023 07:03] zhaojie
+When chain a sends a message to chain b, the contract on chain A sends an event and the axeler network listens for this event and then calls the execute function on chain b
+
+
+[07/16/2023 07:12] 0xjuntao
+yeah in execute function AxelarGateway will validate the call, trying to figure out how it works under the hood```        if (!gateway.validateContractCall(commandId, sourceChain, sourceAddress, payloadHash))
+            revert NotApprovedByGateway();```
+
+
+[07/16/2023 07:19] zhaojie
+execute function is called by a network node that has the source code in their github repository and is based on the cosmos sdk.
+
+
+[07/16/2023 07:34] 0xjuntao
+I think this explains everthing
+
+{Attachments}
+Code4rena - ARCHIVE-Q3-2023 - axelar-jul12 [1126884239330263072].txt_Files/gmp-diagram-DFFD6.webp
+
+{Reactions}
+10_10 (2) 
+
+[07/16/2023 07:47] 0xjuntao
+so anyone can initiate a call and execute the call, no validation?
+
+
+[07/16/2023 07:52] plamkata
+If it passes the timelock period without getting disapproved
+
+
+[07/16/2023 08:24] zhaojie
+contracts on B chain by calling gateway.validateContractCall for validation
+
+
+[07/16/2023 08:34] kawaicho
+which contract is for "TOKEN_DEPLOYER_IMPLEMENTATION" address on `AxelarGateway.sol`
+
+
+[07/16/2023 09:00] 0xjuntao
+TokenDeployer
+
+{Reactions}
+👍🏻 
+
+[07/16/2023 09:28] noro9954
+why nobody from the team is responding in DM ?
+
+
+[07/16/2023 09:30] immeas
+it's weekend?
+
+
+[07/16/2023 09:34] noro9954
+okay, sorry forgot about it 😅
+
+
+[07/16/2023 09:34] 0xjuntao
+can someone answer this question?
+
+
+[07/16/2023 09:49] kawaicho
+dm to the team
+
+
+[07/16/2023 09:49] kawaicho
+i cant find anything in the docs
+
+
+[07/16/2023 09:53] 0xjuntao
+thanks will do
+
+
+[07/16/2023 11:37] 0x1118641
+is there an example implementation of what a Governor contract would look like ?
+
+
+[07/16/2023 11:58] 0x1118641
+also in executeProposal() in InterchainGovernance, is target supposed to be the InterchainProposalSender ? I cant find the link between executeProposal() and sendProposal() in InterchainProposalSender() 🫣
+
+
+[07/16/2023 12:48] 0xkazimm
+which one of the team member is active now please ?
+
+
+[07/16/2023 13:25] 0xprinc
+`InterchainProposalExecutor.sol` is inherited by which contract ?
+
+
+[07/16/2023 14:13] 0xjuntao
+when is this function called? ```    function approveContractCall(bytes calldata params, bytes32 commandId) external onlySelf {
+        (
+            string memory sourceChain,
+            string memory sourceAddress,
+            address contractAddress,
+            bytes32 payloadHash,
+            bytes32 sourceTxHash,
+            uint256 sourceEventIndex
+        ) = abi.decode(params, (string, string, address, bytes32, bytes32, uint256));
+
+
+        _setContractCallApproved(commandId, sourceChain, sourceAddress, contractAddress, payloadHash);
+        emit ContractCallApproved(commandId, sourceChain, sourceAddress, contractAddress, payloadHash, sourceTxHash, sourceEventIndex);
+    }```
+
+
+[07/16/2023 14:13] 0xjuntao
+https://github.com/axelarnetwork/axelar-cgp-solidity/blob/9c7a260c848011f27d6e7ecb1cba88de79206ccc/contracts/AxelarGateway.sol#L455-L467
+
+{Embed}
+https://github.com/axelarnetwork/axelar-cgp-solidity/blob/9c7a260c848011f27d6e7ecb1cba88de79206ccc/contracts/AxelarGateway.sol
+axelar-cgp-solidity/contracts/AxelarGateway.sol at 9c7a260c848011f2...
+Contribute to axelarnetwork/axelar-cgp-solidity development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q3-2023 - axelar-jul12 [1126884239330263072].txt_Files/axelar-cgp-solidity-4D302
+
+
+[07/16/2023 14:56] 0xkazimm
+isn't this function out of scope ?
+
+
+[07/16/2023 15:06] 0xjuntao
+yeah just trying to get the whole picture
+
+{Reactions}
+👍🏻 
+
+[07/16/2023 15:07] 0xkazimm
+wait let me check it for you
+
+
+[07/16/2023 15:09] 0xkazimm
+isn't the function above called in this line ?
+
+https://github.com/axelarnetwork/axelar-cgp-solidity/blob/9c7a260c848011f27d6e7ecb1cba88de79206ccc/contracts/AxelarGateway.sol#L357
+
+{Embed}
+https://github.com/axelarnetwork/axelar-cgp-solidity/blob/9c7a260c848011f27d6e7ecb1cba88de79206ccc/contracts/AxelarGateway.sol
+axelar-cgp-solidity/contracts/AxelarGateway.sol at 9c7a260c848011f2...
+Contribute to axelarnetwork/axelar-cgp-solidity development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q3-2023 - axelar-jul12 [1126884239330263072].txt_Files/axelar-cgp-solidity-4D302
+
+
+[07/16/2023 15:24] 0xjuntao
+yeah that's it👍
+
+
+[07/16/2023 15:24] 0xjuntao
+who calls this execute function then?🧐
+
+
+[07/16/2023 17:59] viktor_cortess
+Hi guys, As I understand the idea of interchain token part of this contest is to transfer tokens and to transfer tokens with a call. And sending some data to the other chain without transferring tokens is out of scope?
+
+
+[07/16/2023 19:19] viktor_cortess
+Does anybody understand how this flows thing works? In the giveToken function we send tokens, but addFlowIn.  As I understand it's a limit to avoid huge transactions, but why it's out with every transfer of tokens and in with the simple transfer of tokens in a giveToken function?
+
+
+[07/17/2023 01:39] 0xjuntao
+@dean.axelar dm please check
+
+{Reactions}
+✅ 
+
+[07/17/2023 01:42] gd.eth
+may be tokenServiceFullFlow.js will help
+
+
+[07/17/2023 04:04] 0xjuntao
+can someone explain this line? ```
+deployed = address(uint160(uint256(keccak256(abi.encodePacked(hex'd6_94', deployer, hex'01')))));```https://github.com/code-423n4/2023-07-axelar/blob/2f9b234bb8222d5fbe934beafede56bfb4522641/contracts/gmp-sdk/deploy/Create3.sol#L74
+
+
+[07/17/2023 04:30] libratus
+It emulates the way CREATE opcode calculates the address of a new smart contract. This way we can know in advance where the new contract will be deployed
+
+{Reactions}
+👍 (3) 
+
+[07/17/2023 05:17] dean.axelar#1908
+I will be answering all DMs received over the weekend in the next few hours. If you DMed me over the weekend, thanks for your patience.
+
+{Reactions}
+👍 
+
+[07/17/2023 13:00] viktor_cortess
+It would be great if you answered here too
+
+
+[07/17/2023 13:15] amaechieth
+I believe the contract inherits AxelarExecutable which has an external execute function
+
+
+[07/17/2023 14:04] _3doc_
+I've not participated to many contests so far but this is by a long way the most frustrating. I guess the team can conversely see it as a compliment - fewer findings, better job 😅 
+At least this Create3 thing is a very nice learning I had not seen around yet. Not giving up just yet though 🥸
+
+
+[07/17/2023 15:10] fulum
+You're in good way, hope you make some findings 🙂
+
+{Reactions}
+🤗 
+
+[07/17/2023 16:01] dean.axelar#1908
+If you're asking about the execute function on the gateway then this function is out of scope for this audit. Here is the audit scope for AxelarGateway.sol: https://github.com/code-423n4/2023-07-axelar/blob/main/README.md#scope
+
+{Embed}
+https://github.com/code-423n4/2023-07-axelar/blob/main/README.md
+2023-07-axelar/README.md at main · code-423n4/2023-07-axelar
+Contribute to code-423n4/2023-07-axelar development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q3-2023 - axelar-jul12 [1126884239330263072].txt_Files/cb623285-c777-44c9-86c9-8f5f2718bc87-0DAAB
+
+
+[07/17/2023 16:03] amaechieth
+@Juntao🐾
+
+
+[07/17/2023 18:30] alymurtazamemon
+@dean.axelar Hey! just sent you a DM. Please check whenever you are available.
+
+{Reactions}
+✅ 
+
+[07/17/2023 22:42] 0xkazimm
+where did the function `_setup` in `RemoteAddressValidators` is called please ?
+
+
+[07/18/2023 01:11] 0xjuntao
+called in the setup method in Upgradable, and will be callded by RemoteAddressValidatorProxy's contructor method```
+(bool success, ) = implementationAddress.delegatecall(abi.encodeWithSelector(IUpgradable.setup.selector, setupParams));
+```https://github.com/code-423n4/2023-07-axelar/blob/2f9b234bb8222d5fbe934beafede56bfb4522641/contracts/gmp-sdk/upgradable/Proxy.sol#L41
+
+{Reactions}
+❤️ 
+
+[07/18/2023 06:26] 0xnirlin
+what is happening in last line here;
+
+
+[07/18/2023 06:26] 0xnirlin
+function deployedAddress(address sender, bytes32 salt) internal pure returns (address deployed) {
+        address deployer = address(uint160(uint256(keccak256(abi.encodePacked(hex'ff', sender, salt, DEPLOYER_BYTECODE_HASH)))));
+
+        deployed = address(uint160(uint256(keccak256(abi.encodePacked(hex'd6_94', deployer, hex'01')))));
+    }
+
+
+[07/18/2023 07:47] mrpotatomagic
+https://discord.com/channels/810916927919620096/1126884239330263072/1130355774892286093
+
+
+[07/18/2023 09:04] _3doc_
+trying to answer here, the team will correct me when available if I am wrong:
+this function computes the address of a deployed contract through the create3 method. Since the create3 method is a combination of "create2" and a subsequent "create", the 2 lines there compute the addresses of the contracts deployed with these two methods in order
+
+
+[07/18/2023 09:05] _3doc_
+so `deployed = address(uint160(uint256(keccak256(abi.encodePacked(hex'd6_94', deployer, hex'01')))));` computes the address of the first contract deployed via "create" by the auxiliary contract at the address "deployer" (which in turn is created via a create2 call)
+
+
+[07/18/2023 09:07] 0xnirlin
+Why hex'd6_94' and hex'01' specifically
+
+
+[07/18/2023 09:08] 0xnirlin
+thanks for response though
+
+
+[07/18/2023 11:43] pcarranzav
+Hey folks, looking at AxelarServiceGovernance / InterchainGovernance. The governance address that sends the cross-chain approvals i.e. sourceAddress sending a message from the sourceChain: is that generally going to be a Multisig or some other contract?
+
+
+[07/18/2023 12:01] _3doc_
+that has to do with how contract addresses are computed in solidity: 01 is the nonce, and d6 94 is the header added by the RLP encoding https://ethereum.stackexchange.com/questions/760/how-is-the-address-of-an-ethereum-contract-computed
+
+{Embed}
+https://ethereum.stackexchange.com/questions/760/how-is-the-address-of-an-ethereum-contract-computed
+How is the address of an Ethereum contract computed?
+How is the address of an Ethereum contract computed?  What use cases are there for knowing a contract's address in advance?
+Code4rena - ARCHIVE-Q3-2023 - axelar-jul12 [1126884239330263072].txt_Files/apple-touch-icon%402-EBA58.png
+
+{Reactions}
+👍 (2) 
+
+[07/18/2023 13:47] 0xkazimm
+thx ser
+
+
+[07/18/2023 14:43] nican0r
+Hey @dean.axelar @Milap | Axelar is it safe to assume that `InterchainTokenService` will only ever be deployed by the protocol team or are there future plans to allow anyone to deploy this service?
+
+{Reactions}
+✅ 
+
+[07/18/2023 16:00] zaevlad
+@dean.axelar dm you, thanks
+
+{Reactions}
+✅ 
+
+[07/18/2023 16:02] dean.axelar#1908
+This is referring to the governance address on Axelarnet
+
+{Reactions}
+thankyou 
+
+[07/18/2023 16:37] dean.axelar#1908
+It will be deployed by the protocol team
+
+{Reactions}
+👍 
+
+[07/18/2023 18:25] brahma7456
+@dean.axelar  can you check dm please?
+
+{Reactions}
+✅ 
+
+[07/18/2023 18:25] 0xprinc
+why is address stored in the form of string ? 🤔
+
+
+[07/18/2023 18:26] 0xprinc
+@dean.axelar  ser please check dm
+
+{Reactions}
+✅ 
+
+[07/18/2023 18:36] brahma7456
+@Juntao🐾 ser did u manage to understand when this function is called?
+
+
+[07/18/2023 18:51] eme0242
+I guess it is called by Axelar nodes after the `Contractcall` event has been emitted
+
+{Reactions}
+🫡 
+
+[07/18/2023 20:04] 0xkazimm
+as i understand it, they use some check for if the address is maching or not and even they set it to lower case and its bit clear the protocol want to handle address as string for some reasons in their functions, hope that was helpful
+
+
+[07/18/2023 20:11] 0xkazimm
+i asked the team about this function `function deployedAddress` and @dean.axelar  give us the best explain, hope this help all wardens:
+
+the question :
+```
+and can i know how this function calculated the address please ?
+
+ function deployedAddress(address sender, bytes32 salt) internal pure returns (address deployed) {
+        address deployer = address(uint160(uint256(keccak256(abi.encodePacked(hex'ff', sender, salt, DEPLOYER_BYTECODE_HASH)))));
+
+        deployed = address(uint160(uint256(keccak256(abi.encodePacked(hex'd6_94', deployer, hex'01')))));
+    }
+```
+
+the answer:
+
+```
+address deployer = address(uint160(uint256(keccak256(abi.encodePacked(hex'ff', sender, salt, DEPLOYER_BYTECODE_HASH)))))
+This line computes the address where the CreateDeployer contract would be deployed via a CREATE2 operation, based on the sender (which is the address of the contract that calls the deploy function), a salt, and the DEPLOYER_BYTECODE_HASH (which is the keccak256 hash of the CreateDeployer contract's bytecode).
+
+deployed = address(uint160(uint256(keccak256(abi.encodePacked(hex'd6_94', deployer, hex'01')))))
+The second line takes the address of the CreateDeployer contract (calculated in the previous step), and uses it to compute another address, this time using a different prefix (hex'd6_94) and suffix (hex'01). This additional hash operation is used to compute the address of the contract that will be deployed using the CREATE opcode by the CreateDeployer contract.
+
+```
+
+{Reactions}
+👍 (3) 
+
+[07/18/2023 20:12] dean.axelar#1908
+Addresses are treated as strings to allow for non-evm chain support in the feature, and they must be converted to lowercase to avoid case differences leading to inequality when in fact the addresses are equal.
+
+{Reactions}
+👍🏻 
+
+[07/18/2023 20:12] dean.axelar#1908
+Thanks @0xkazim for sharing my answer!
+
+{Reactions}
+❤️ 
+
+[07/18/2023 20:13] 0xkazimm
+anytime ser 🫡
+
+
+[07/18/2023 20:20] dean.axelar#1908
+Replied
+
+{Reactions}
+🫡 
+
+[07/19/2023 03:00] pcarranzav
+@dean.axelar I just sent you a DM 📬
+
+
+[07/19/2023 03:51] josephdara
+``        if (tokenManagerRequiresApproval()) {
+            uint256 allowance_ = allowance[sender][address(tokenManager)];
+            if (allowance_ != type(uint256).max) {
+                if (allowance_ > type(uint256).max - amount) {
+                    allowance_ = type(uint256).max - amount;
+                }
+
+                _approve(sender, address(tokenManager), allowance_ + amount);
+            }
+``
+
+
+[07/19/2023 03:53] josephdara
+What's the use of this in the code ? @dean.axelar 🙏 
+
+Because it does not max approve the allowance for the tokenManager when the current allowance is less than type(uint256).max - amount
+
+
+[07/19/2023 03:53] josephdara
+Source: InterchainToken.sol
+
+
+[07/19/2023 04:21] _3doc_
+1. It increases the allowance by ‘amount’ when it’s not already at max
+2. It protects from overflowing uint256 when needed
+
+{Reactions}
+thankyou 
+
+[07/19/2023 04:26] josephdara
+Ok, thanks
+In some cases, the allowance might be enough to cover the amount though. Having to always increase approval whether it's enough or not for the transaction is extra gas for users I believe
+But that's probably a QA
+
+{Reactions}
+👍 
+
+[07/19/2023 04:36] coffiasd
+@dean.axelar  send you a dm
+
+{Reactions}
+✅ 
+
+[07/19/2023 06:05] 0xrizwan
+@dean.axelar Please check DM.
+
+{Reactions}
+✅ 
+
+[07/19/2023 08:27] coffiasd
+I don't find an implementation of abstract contract `InterchainToken` if i missed something ?
+
+
+[07/19/2023 08:30] immeas
+here it is:
+https://github.com/code-423n4/2023-07-axelar/blob/main/contracts/its/token-implementations/StandardizedToken.sol
+
+{Embed}
+https://github.com/code-423n4/2023-07-axelar/blob/main/contracts/its/token-implementations/StandardizedToken.sol
+2023-07-axelar/contracts/its/token-implementations/StandardizedToke...
+Contribute to code-423n4/2023-07-axelar development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q3-2023 - axelar-jul12 [1126884239330263072].txt_Files/cb623285-c777-44c9-86c9-8f5f2718bc87-0DAAB
+
+
+[07/19/2023 08:31] immeas
+which in turn is implemented by `LockUnlock`/`MintBurn` in the same dir
+
+{Reactions}
+🥹 
+
+[07/19/2023 09:26] coffiasd
+@immeas thank you
+
+{Reactions}
+hi5 
+
+[07/19/2023 11:38] neon2835
+guys, can someone tell me which file is the calculation logic code for transaction fees or network fees? I can't find the code related to fee calculation
+
+
+[07/19/2023 12:37] _3doc_
+if you are referring to the bridged calls i.e. InterchainProposalSender's gas values of the calls, that's in my understanding up to the caller to estimate how much gas to refund to cover the call, and that can very well happen off-chain
+
+
+[07/19/2023 12:46] neon2835
+In addition to gas fees, do nodes and verifiers not need to pay for fees?
+
+
+[07/19/2023 12:49] neon2835
+just like this doc said : https://docs.axelar.dev/dev/reference/pricing
+
+{Embed}
+https://docs.axelar.dev/dev/reference/pricing
+Axelar Pricing | Axelar
+Axelar Network Resources & Documentation
+Code4rena - ARCHIVE-Q3-2023 - axelar-jul12 [1126884239330263072].txt_Files/og-3997F.png
+
+
+[07/19/2023 12:50] neon2835
+Network Base Fee /  Execution Fee ..
+
+
+[07/19/2023 14:49] viktor_cortess
+Hi guys, sorry for the stupid question but where does commandId value come from? in tests it's a random value. commandId = getRandomBytes32() . In axelarGateway it's always an input parameter. But how is the commandId formed?
+
+
+[07/19/2023 15:58] 0xkazimm
+in which scenario/case the owner will call the `removeTrustedAddress` function ?
+
+
+[07/19/2023 18:10] dean.axelar#1908
+If there is ever a scenario where the Interchain Token Service address on a specific chain due to any reason can no longer be trusted
+
+{Reactions}
+❤️ 
+
+[07/19/2023 19:48] 0xhals
+Hi @dean.axelar ,sent you a DM,,
+
+{Reactions}
+✅ 
+
+[07/20/2023 12:43] bauchibred
+Hi @dean.axelar , sent you a DM
+
+{Reactions}
+✅ 
+
+[07/20/2023 15:30] dean.axelar#1908
+Will be responding to all DMs shortly!
+
+{Reactions}
+❤️ 
+
+[07/20/2023 18:08] viktor_cortess
+There is no info about express receiving, so I googled and found this. Is it true?
+GMP Express
+Privileged clients (protocols) can be allowed by Axelar to use the Express version of the messaging protocol. A standard message can take several minutes for the Axelar network to fully approve the message and pass it to the final destination. The express message will still go through the Axelar network, but GMP Express Service will lend any sent tokens to the destination address while approval is happening. Once the complete approval is done, tokens are paid back to the GMP Express service. This process can speed up the cross-chain transfer more than ten times. The crucial part of GMP Express is complete trust between the privileged protocol and Axelar. The privileged protocol MUST implement the logic for token returns when a standard message is received. Otherwise, the privileged protocol will receive 2x more tokens. See ExpressExecutable for more information.
+
+{Reactions}
+👍 
+
+[07/20/2023 20:25] 0xkazimm
+in the `getRemoteAddress` did the if statement will run only for the non evm chains or it runs for all support and non support chains?!
+
+
+[07/21/2023 06:32] dean.axelar#1908
+This works for both EVM and non-EVM chains. If the if-statement passes that means we are referring to an EVM chain in which case the address will be the interchainTokenServiceAddress which is constant across EVM chains.
+
+{Reactions}
+👍🏻 
+
+[07/21/2023 09:07] topmark1
+Hello
+
+{Reactions}
+👋 
+
+[07/21/2023 15:48] c145h
+Is the total SLOC correct? 3257? I cannot find that many lines
+
+{Attachments}
+Code4rena - ARCHIVE-Q3-2023 - axelar-jul12 [1126884239330263072].txt_Files/image-3C833.png
+
+
+[07/21/2023 16:03] t1moh
+In rsvp channel it shows 2500. I think this form is fulfilled by sponsor at the start, and can vary from result scope
+
+
+[07/21/2023 18:13] acegawd
+DM @dean.axelar
+
+{Reactions}
+✅ 
+
+[07/21/2023 20:02] C4
+**🚨 AUDIT ALERT**
+
+@🐺wardens The **Axelar** audit is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Keep an eye on #📢announcements for regular updates on how the audit is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a Contest-Admin if you have questions along the way!
+
+{Reactions}
+code4rena (13) 🚀 (9) ❤️ 
+
+[07/21/2023 20:09] mrpotatomagic
+Thank you @dean.axelar and rest of the team for your coordination
+
+{Reactions}
+💯 
+
+[07/21/2023 20:10] fulum
+Thanks for the devs team, very helpful answers to questions, and good codebase, I learn a lot of things, gl everyone :hi5:
+
+
+[07/21/2023 20:16] addicted2crypto
+Lurking on this 1 definitely added some knowledge
+
+{Reactions}
+➕ 
+
+[07/21/2023 20:18] dean.axelar#1908
+No problem! We appreciate your diligence in reviewing our codebase!
+
+{Reactions}
+❤️‍🔥 
+
+[07/21/2023 20:43] 0xkazimm
+Special thanks to @dean.axelar  for answering all answers and helped all wardens🫡
+
+{Reactions}
+💯 (4) hi5 
+
+[07/23/2023 13:08] 4n0nx
+When the results are posted?
+
+
+[07/23/2023 15:03] 0xkazimm
+after one month and 1-2 weeks maybe !
+
+
+[07/23/2023 16:59] 4n0nx
+40 days
+Are all the contents took that long to check the reports?
+
+
+[07/23/2023 17:27] 0xkazimm
+Not all time, it depends on the contest delay and codebase and other factors. But most of contest result are shared after one month and some weeks
+
+
+[07/23/2023 19:06] max10afternoon
+https://docs.code4rena.com/structure/our-process
+
+{Embed}
+https://docs.code4rena.com/structure/our-process
+Audit timeline
+This is a high level overview of the C4 audit timeline. We have an increasingly detailed operational manual in Notion.
+
+
+[08/15/2023 12:06] noro9954
+GM, why is axelar audit still in Contest Completed stage ? https://discord.com/channels/810916927919620096/810929015509483554/1140783922289070210
+
+
+[08/15/2023 14:56] thebrittfactor
+GM! This audit is still in the sponsor review phase 🙂
+
+
+[08/16/2023 18:10] fulum
+How many findings are submitted ? 🙂
+
+
+[08/17/2023 04:26] brahma7456
+🕵️‍♂️
+
+
+[08/21/2023 07:24] 0xnirlin
+:thisisfine:
+
+
+[08/22/2023 07:13] ihtishamsudo
+still?
+
+
+[08/22/2023 07:14] matin6517
+Probably forever🥹
+
+
+[08/24/2023 17:40] t1moh
+Arbitrum contest held from start to the end during pre-sort of Axelar
+
+
+[08/24/2023 18:16] fulum
+https://tenor.com/view/cringe-gif-26494931
+
+{Embed}
+https://tenor.com/view/cringe-gif-26494931
+Code4rena - ARCHIVE-Q3-2023 - axelar-jul12 [1126884239330263072].txt_Files/cringe-98919.png
+
+{Reactions}
+😂 (9) 
+
+[08/29/2023 23:15] pks7323
+Why no result until now? So long time passed.
+
+
+[08/30/2023 06:58] ihtishamsudo
+Judging has just started it will take maybe 1 month more
+
+{Reactions}
+😥 (3) 
+
+[08/30/2023 12:42] 0xkazimm
+https://tenor.com/view/%DA%AF%D8%B1%DB%8C%D9%87-%D9%86%D8%A7%D8%B1%D8%A7%D8%AD%D8%AA-%D8%BA%D9%85-gerye-narahat-gif-23378340
+
+{Embed}
+https://tenor.com/view/%DA%AF%D8%B1%DB%8C%D9%87-%D9%86%D8%A7%D8%B1%D8%A7%D8%AD%D8%AA-%D8%BA%D9%85-gerye-narahat-gif-23378340
+Code4rena - ARCHIVE-Q3-2023 - axelar-jul12 [1126884239330263072].txt_Files/%25DA%25AF%25D8%25B1%25DB%258C%25D9%2587-%-86589.png
+
+{Reactions}
+😂 (4) 👍 
+
+[08/30/2023 15:02] pks7323
+https://tenor.com/view/dont-cry-gif-23307819
+
+{Embed}
+https://tenor.com/view/dont-cry-gif-23307819
+Code4rena - ARCHIVE-Q3-2023 - axelar-jul12 [1126884239330263072].txt_Files/dont-cry-93595.png
+
+{Reactions}
+😂 (3) 
+
+[08/30/2023 17:03] 0xnirlin
+:4739_Skeletor:
+
+
+[09/01/2023 13:18] hunter_w3b
+https://tenor.com/view/sleepy-viralhog-relax-rest-dog-gif-12157983384879422243
+
+{Embed}
+https://tenor.com/view/sleepy-viralhog-relax-rest-dog-gif-12157983384879422243
+Code4rena - ARCHIVE-Q3-2023 - axelar-jul12 [1126884239330263072].txt_Files/sleepy-viralhog-AA6ED.png
+
+
+[09/01/2023 14:12] 0xkazimm
+@thebrittfactor | C4  hey ser, did this contest took much longer to share the results? thanks 😊
+
+
+[09/01/2023 14:59] 0x11singh99
+Some contests are really slow unfortunately it is one of them😅
+
+{Reactions}
+👍🏻 (2) 
+
+[09/01/2023 15:00] 0x11singh99
+1st Great Rubicon ,then basin now this one
+
+
+[09/01/2023 15:05] thebrittfactor
+We anticipate judging to wrap up next week. Y'alls patience is appreciated with this one :hi5: 🎉
+
+{Reactions}
+hi5 (5) 
+
+[09/01/2023 16:28] ihtishamsudo
+Meanwhile lens 💀
+
+
+[09/03/2023 10:50] 0xnirlin
+:hi5:
+
+
+[09/11/2023 09:33] 0xnirlin
+:thisisfine:
+
+
+[09/11/2023 10:11] hunter_w3b
+https://tenor.com/view/waiting-waiting-patiently-waiting-for-you-waiting-on-you-gif-15489516379864441176
+
+{Embed}
+https://tenor.com/view/waiting-waiting-patiently-waiting-for-you-waiting-on-you-gif-15489516379864441176
+Code4rena - ARCHIVE-Q3-2023 - axelar-jul12 [1126884239330263072].txt_Files/waiting-waiting-patiently-264C9.png
+
+{Reactions}
+😂 (3) 
+
+[09/11/2023 10:47] 0x11singh99
+😅
+
+
+[09/12/2023 06:08] 0xnirlin
+:10_10:
+
+
+[09/12/2023 06:36] 0x11singh99
+@thebrittfactor | C4  any chance that results will come this week
+
+
+[09/12/2023 06:46] 0xnirlin
+:10_10:
+
+{Reactions}
+👀 
+
+[09/12/2023 06:50] shubh0412
+Probably by the end of the week
+
+
+[09/12/2023 07:08] 0xnirlin
+prolly today
+
+
+[09/12/2023 07:10] shubh0412
+Nope
+
+
+[09/12/2023 10:50] 0xkazimm
+you sure bro ? 🥲
+
+
+[09/12/2023 12:59] thebrittfactor
+https://tenor.com/view/maaaayyybe-fallon-maybe-gif-5280420
+
+{Embed}
+https://tenor.com/view/maaaayyybe-fallon-maybe-gif-5280420
+Code4rena - ARCHIVE-Q3-2023 - axelar-jul12 [1126884239330263072].txt_Files/maaaayyybe-fallon-7803D.png
+
+{Reactions}
+🤣 (8) 
+
+[09/12/2023 13:32] 0x11singh99
+:hi5:
+
+
+[09/12/2023 15:40] 0xnirlin
+I was, 😂
+
+{Reactions}
+😂 
+
+[09/12/2023 16:36] 0xnirlin
+You let me down today :thisisfine: :thisisfine:
+
+
+[09/12/2023 16:54] thebrittfactor
+Aw, don't do that to me 🤣 🫣 
+There's still 3.5 days left in my week 😅
+
+{Reactions}
+chefskiss (2) 😂 
+
+[09/12/2023 16:55] 0xsorrynotsorry
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q3-2023 - axelar-jul12 [1126884239330263072].txt_Files/image0-3E1FA.gif
+
+{Reactions}
+👀 🤣 (3) 
+
+[09/12/2023 16:57] 0xnirlin
+You should have told the hours left in today instead of days in week 😭
+
+
+[09/12/2023 16:58] hunter_w3b
+https://tenor.com/view/eye-rolling-eyes-gif-10217929
+
+{Embed}
+https://tenor.com/view/eye-rolling-eyes-gif-10217929
+Code4rena - ARCHIVE-Q3-2023 - axelar-jul12 [1126884239330263072].txt_Files/eye-rolling-F9868.png
+
+
+[09/13/2023 11:18] _paperparachute
+It's happening today we promise!
+
+{Reactions}
+👀 hi5 (8) ❤️ 😭 (3) 
+
+[09/13/2023 11:18] _paperparachute
+https://tenor.com/view/nene-leaks-dont-come-for-gif-13363001
+
+{Embed}
+https://tenor.com/view/nene-leaks-dont-come-for-gif-13363001
+Code4rena - ARCHIVE-Q3-2023 - axelar-jul12 [1126884239330263072].txt_Files/nene-leaks-B1D9D.png
+
+
+[09/13/2023 12:53] 0xnirlin
+:hi5: :hi5:
+
+
+[09/13/2023 13:15] hunter_w3b
+https://tenor.com/view/good-gif-26461987
+
+{Embed}
+https://tenor.com/view/good-gif-26461987
+Code4rena - ARCHIVE-Q3-2023 - axelar-jul12 [1126884239330263072].txt_Files/good-FB846.png
+
+
+[09/13/2023 15:11] thebrittfactor
+🤑 🎉  Awards for **Axelar Network**:
+
+$12,679.20 USDC » @immeas 
+$11,945.25 USDC » @nobody2018 
+$9,509.32 USDC » @Jeiwan  
+$5,976.25 USDC » @pcarranzav 
+$4,711.20 USDC » @0xTheC0der 
+$2,120.04 USDC » @nirlin 
+$1,956.96 USDC » @Chom 
+$1,630.80 USDC » @QiuhaoLi 
+$1,410.12 USDC » @T1MOH 
+$1,272.02 USDC » @bart1e 
+$1,117.45 USDC » @Sathish9098 
+$1,073.25 USDC » UniversalCrypto (@amaechi eth and @tettehnetworks)
+$978.48 USDC » @Shubham 
+$922.23 USDC » @libratus 
+$755.24 USDC » @Toshii 
+$664.42 USDC » @Rolezn 
+$189.74 USDC » @0xn006e7 
+$189.74 USDC » @SM3_SS 
+$189.74 USDC » @SAQ 
+$189.74 USDC » @Arz 
+$189.74 USDC » @Raihan  
+$188.68 USDC » @MrPotatoMagic 
+$164.63 USDC » @K42 Ψ 
+$145.35 USDC » @niloy 
+$138.10 USDC » @Emmanuel 
+$94.77 USDC » @0xkazim 
+$94.77 USDC » @Viktor_Cortess 
+$94.77 USDC » @qpzm 
+$94.77 USDC » @KrisApostolov 
+$62.60 USDC » @David Giladi 
+$62.60 USDC » @matrix_0wl 
+$62.60 USDC » @naman1778 
+$43.33 USDC » @hals 
+$43.33 USDC » @MohammedRizwan
+$43.33 USDC » @banpaleo5 
+$43.33 USDC » @Bauchibred 
+$43.33 USDC » @udsen_ 
+$19.28 USDC » @dharma09 
+$19.28 USDC » @Walter
+$19.28 USDC » @0xAnah 
+$19.28 USDC » @ReyAdmirado  
+$19.28 USDC » @hunter_w3b
+$19.28 USDC » @smartstar
+$19.28 USDC » @SY_S 
+$19.28 USDC » @ybansal2403 
+$19.28 USDC » @petrichor🦖 
+$19.28 USDC » @0x11singh99
+
+🏁 Findings summary
+-------------------------------------
+High risk findings: 2 unique (4 total)
+Med risk findings: 9 unique (32 total)
+Gas reports: 21 (Best: Sathish9098)
+QA reports: 15 (Best: immeas)
+Advanced Analysis reports: 7 (Best: pcarranzav)
+
+Awards will be distributed on Polygon within the next week. Congratulations all!  💸 💸 💸
+
+*Note: If you participated in this audit and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions.*
+
+{Reactions}
+dance_vibe (6) ❤️ (7) 😭 (4) 🚀 (5) 🎉 (2) 👽 (2) 
+
+[09/13/2023 15:21] shubh0412
+First 3 digit 🔥 🎉
+
+{Reactions}
+chefskiss (2) hi5 (5) 👏 (2) 
+
+[09/13/2023 15:21] t1moh
+@immeas congrats!
+
+{Reactions}
+💯 (8) 
+
+[09/13/2023 15:55] 0xnirlin
+Congrats to you too, you are getting consistently to the top. 🎉
+
+{Reactions}
+4739_Skeletor (2) 
+
+[09/13/2023 16:09] t1moh
+Unfortunately top moves faster
+
+{Reactions}
+🥲 
+
+[09/13/2023 16:15] 0xnirlin
+You ain't slow either 😎
+
+
+[09/15/2023 02:52] radcet_
+hi everyone, axelar is my first contest, and I wonder how i can check my submit is receive ? cause in profile page I see 0 audits listed, and the finding repos is not public yet. Tks everyone ❤️
+
+
+[09/15/2023 08:04] zhaojie
+You need backstage permission
+
+{Reactions}
+❤️ 
+
+[09/15/2023 08:50] radcet_
+i don't have that permission 😦 do you know who i can contact to help me 😢
+
+
+[09/15/2023 08:51] zhaojie
+Waiting for the report public , long long time later
+
+{Reactions}
+❤️ 
+
+[09/15/2023 08:53] radcet_
+ty ❤️ i will wait for it
+
+
+[09/15/2023 08:56] zhaojie
+You can look at  reports on c4's github has been published , you will know the contest process.
+
+{Reactions}
+❤️ 
+
+[09/15/2023 15:18] uncle Jeff#4407
+the audit won't be added to your profile till the results are out
+
+{Reactions}
+❤️ 
+
+==============================================================
+Exported 216 message(s)
+==============================================================
